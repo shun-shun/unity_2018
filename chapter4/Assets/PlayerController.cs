@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject cannonBall;
     public Transform spawnPoint;
     
-    void update() {
+    void Update() {
         transform.Translate (Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime, 0, 0);
         transform.position = new Vector2 (Mathf.Clamp (
             transform.position.x, -moveableRange, moveableRange), 
